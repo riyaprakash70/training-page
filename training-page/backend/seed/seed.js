@@ -25,28 +25,60 @@ const seed = async () => {
 
   const videos = [
     {
-      title: "HTML Basics",
+      title: "IT",
+      count: 120,
+      categoryType: "main",
+      pdfLink: "https://example.com/webdev-notes.pdf",
+      videoLink: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
       description: "Learn the structure of the web.",
       thumbnail: "https://i.ytimg.com/vi/UB1O30fR-EE/maxresdefault.jpg",
       src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
     },
     {
-      title: "CSS Flexbox",
+      title: "Graphic design",
+      count: 95,
+      categoryType: "main",
+      pdfLink: "https://example.com/datasci-notes.pdf",
+      videoLink: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
       description: "Master layout with Flexbox.",
       thumbnail: "https://i.ytimg.com/vi/JJSoEo8JSnc/maxresdefault.jpg",
       src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
     },
     {
-      title: "JavaScript DOM",
+      title: "Business",
       description: "Interact with the web page.",
       thumbnail: "https://i.ytimg.com/vi/0ik6X4DJKCc/maxresdefault.jpg",
       src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
     },
     {
-      title: "React Basics",
+      title: "Art",
       description: "Start building apps with React.",
       thumbnail: "https://i.ytimg.com/vi/bMknfKXIFA8/maxresdefault.jpg",
       src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+    },
+    {
+      title: "Node.js Introduction",
+      description: "Learn server-side JavaScript.",
+      thumbnail: "https://i.ytimg.com/vi/8aGhZQkoFbQ/maxresdefault.jpg",
+      src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+    },
+    {
+      title: "Express.js Basics",
+      description: "Build web applications with Express.",
+      thumbnail: "https://i.ytimg.com/vi/L72fhGm1tfE/maxresdefault.jpg",
+      src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+    },
+    {
+      title: "MongoDB Overview",
+      description: "Learn about NoSQL databases.",
+      thumbnail: "https://i.ytimg.com/vi/1j0c8d2a9b4/maxresdefault.jpg",
+      src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+    },
+    {
+      title:"Digital marketing",
+      description: "Understand digital marketing strategies.",
+      thumbnail: "https://i.ytimg.com/vi/IY8SPoyehxU/maxresdefault.jpg",
+      src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp
     }
   ];
 
