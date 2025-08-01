@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./TrainingPage.css";
 
-import Image1 from "./assets/your-image1.png";
+import HeroImage from "./assets/your-image.png";
 import Image2 from "./assets/your-image2.png";
 
 const TrainingPage = () => {
@@ -204,37 +204,37 @@ const [showVideoPopup, setShowVideoPopup] = useState(false);
 
  return (
   <>
-    <div className="training-page">
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-text" data-aos="fade-right">
-          <h1>
-            Acquiring <em>skills</em> for a brighter career
-          </h1>
-          <p>
-            Our platform offers a wide range of courses and resources designed
-            to help you acquire new competencies, stay current with industry
-            trends, and improve your employability.
-          </p>
-          <div className="search-box">
-            <input type="text" placeholder="Enter course" />
-            <button>Search</button>
-          </div>
-          <div className="stats">
-            <div>
-              <h2>15k+</h2>
-              <p>Fresh graduates</p>
-            </div>
-            <div>
-              <h2>6+</h2>
-              <p>Years of experience</p>
-            </div>
-          </div>
-        </div>
-        <div className="hero-image" data-aos="fade-left">
-          <img src={Image1} alt="Student Learning" />
-        </div>
-      </section>
+  {/* hero section */}
+     <section className="hero-section" data-aos="fade-up">
+  <div className="hero-content">
+    <div className="hero-left">
+      <h1 className="hero-title">Learn How To Launch a Successful Podcast</h1>
+      <p className="hero-subtitle">
+        Learn skills that match real job roles and market demands.
+        Access high-quality video tutorials anytime, anywhere.
+      </p>
+      <div className="hero-buttons">
+        <button className="primary-btn" onClick={scrollToCategories}>
+          Explore Courses
+        </button>
+        <button className="secondary-btn" onClick={() => {
+          const section = document.querySelector(".video-showcase");
+          section?.scrollIntoView({ behavior: "smooth" });
+        }}>
+          Watch Video
+        </button>
+      </div>
+    </div>
+    <div className="hero-right">
+      <img
+        src={HeroImage}
+        alt="Podcasting woman"
+        className="hero-image"
+      />
+    </div>
+  </div>
+</section>
+
 
       {/* Learning Modes */}
       <section className="learning-modes" data-aos="zoom-in">
@@ -402,18 +402,17 @@ const [showVideoPopup, setShowVideoPopup] = useState(false);
         </section>
       </div>
 
-      {/* 📺 Fullscreen Video Popup */}
-      {selectedVideo && (
-        <div className="video-popup" onClick={closeVideoPopup}>
-          <div className="video-popup-content">
-            <video controls autoPlay src={selectedVideo.src}></video>
-            <p className="popup-description">{selectedVideo.description}</p>
-          </div>
-        </div>
-      )}
+{/* 📺 Fullscreen Video Popup */}
+{selectedVideo && (
+  <div className="video-popup" onClick={closeVideoPopup}>
+    <div className="video-popup-content">
+      <video controls autoPlay src={selectedVideo.src}></video>
+      <p className="popup-description">{selectedVideo.description}</p>
     </div>
-    {/* Course Options Popup */}
-    {selectedCourse && (
+  </div>
+)}
+{/* Course Options Popup */}
+{selectedCourse && (
   <div className="fullscreen-popup" onClick={() => setSelectedCourse(null)}>
     <div className="popup-content" onClick={(e) => e.stopPropagation()}>
       <h2>{selectedCourse.title}</h2>
@@ -462,9 +461,9 @@ const [showVideoPopup, setShowVideoPopup] = useState(false);
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-    </div>
-  </div>
-)}
+          </div>
+        </div>
+      )}
     </>
   );
 };
